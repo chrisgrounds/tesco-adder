@@ -4,6 +4,8 @@ const { items } = require("./items.json");
 const { email, password } = require("./credentials.json");
 const chalk = require('chalk');
 
+if(!email || !password) throw new Error("A username and password must be provided within ./credentials.json');
+
 const options = new Options();
 options.setUserPreferences({ "User-Agent": "chrisgrounds" });
 
